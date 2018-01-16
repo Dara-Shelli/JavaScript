@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>08-game_rightprice</title>
+</head>
+<body>
+
+	<script>
+		let message = "";
+		let number = 0;
+		let minValue = 20;
+		let maxValue = 80;
+
+		let randomNmr = function() {
+			 let poop = Math.floor(Math.random() * (maxValue - minValue + 1) + minValue);  // return will give a value  30
+			 return poop;
+			// console.log(poop);
+		}
+
+        let nb = randomNmr();
+
+        // console.log(nb);
+
+		// let poop = randomNmr(); // random numr will be tansform into a value
+		
+		let game = function()  {
+			let price = prompt('Your price');
+
+			if (price == nb) {
+				number++;
+				console.log("congrats! you found in " + number + " attempts ");
+			}
+
+			else if (price < nb) {
+				console.log("It's more");
+				number++;
+				game();
+			}
+
+			else if (price > nb) {
+				console.log("it's less");
+				number++;
+				game();
+
+			}
+			else {
+				console.log("Read ruels again, S.V.P!");
+			}
+		}
+
+		game();
+
+		// function test() {
+		// 	number++;
+		// 	randomNmr();
+		// 	game();
+		// }
+
+		//  test();
+
+
+	</script>
+
+</body>
+</html>

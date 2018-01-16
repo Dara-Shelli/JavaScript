@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>01 - Variables</title>
+</head>
+
+<body>
+<script>
+
+	let collection = [1, 2, 3, 4, 5, 6, 7, 8, 9, 100];
+     console.log( collection[4] );
+
+
+
+     let count = 0;
+
+     while ( count < 10 ) {
+         console.log(collection[count])
+        count++;
+        
+        //count = count + 1;
+
+     }
+       console.log(count);
+     
+
+	
+	let result = 0;
+
+    for (let i = 0; i < collection.length; i++) {
+     	result = result + collection[i];
+     }
+
+     console.log(result);
+     console.warn(result);
+
+
+     // Ex-2
+
+     let actors = ["actor1", "actor2", "actror3"];
+
+     actors.forEach((element, iterator) => {
+     	console.log("the number " + (iterator+1)+ " is " + element);
+     })
+
+     // Ex-3
+     
+
+	
+</script>
+
+
+
+</body>
+</html>

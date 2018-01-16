@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>03-loop</title>
+</head>
+<body>
+	<script type="text/javascript">
+
+		let max = 20;
+		for (let i = 0; i <= max; i++) {
+			if (i%2 === 0){
+				console.log(i + ' est pair')
+          } else if (i%2 === 1){
+          	console.log(i + ' est impair')
+          }
+		};
+
+
+		// Exercise: Multiplication Tables
+
+		let max2 = 10;
+
+		for (let i = 0; i <= max; i++) {
+			console.log(i + '*9 =' + (i+9));
+		}
+
+		//Exercise: assign grades
+
+		let max3 = 100;
+		let i = 1;
+		let result ;
+
+		while (i <= max3) {
+			if (i > 90) {
+				result = ' For ' + i + ' you have grade A';
+			} else if (i > 80) {
+				result = ' For ' + i + ' you have grade B';
+			} else if (i > 70) {
+				result = ' For ' + i + ' you have grade C';
+			} else if (i > 65) {
+				result = ' For ' + i + ' you have grade D';
+			} else {
+				result = ' For ' + i + ' you have grade F';
+			}
+			i++;
+			console.log(result);
+		};
+
+		// 
+
+		let pyramide = '';
+		for (i = 0; i <= 4; i++) {
+			pyramide = pyramide + '* ';
+			console.log(pyramide);
+		}
+
+
+		
+	</script>
+	 <script src="main.js"></script>
+
+</body>
+</html>

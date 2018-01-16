@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>07-object</title>
+</head>
+<body>
+
+	<script>
+
+		// ex-1
+
+		let Character = {
+
+			name : "Dasha", 
+			age: 28, 
+		    items_to_give: ["patronus", "Marauder's Map", "Wand", "Sword"],
+		}
+
+		for(properties in Character ) {
+			console.log(Character[properties])
+		}
+
+		let giveItem = function() {
+			let itemsGiven = Character.items_to_give.length
+			let randomize = Math.floor(Math.random() * itemsGiven);
+			let equipment = Character.items_to_give[randomize];
+			console.log(Character.name + ' has received a ' + equipment);
+		}
+
+		giveItem();
+
+		// ex-2
+
+		let objects = [
+
+		{ // i = 0	   
+		   title: "Sword",
+	       physic: 5,
+		   magic: 2,
+		   minLevel: 1,
+		   available: true,
+		},
+
+		{ // i = 1
+			title: "Axe",
+			physic: 4,
+			magic: 3,
+			minLevel: 2,
+			available: false,
+         },
+
+         { // i = 2
+         	title: "Sceptre",
+         	physic: 7,
+         	magic: 5,
+         	minLevel: 17,
+         	available: true 
+         }];
+
+         let allObjects = function() {
+         	for ( let i= 0; i < objects.length; i++) {
+         		console.log(objects [i]);
+         	}
+         }
+         allObjects();
+
+        let availableObjects = function(){
+        	for (let i = 0; i < objects.length; i++) {
+        		if (objects[i].available == true ) {
+        			console.log(objects[i]);
+        		}
+        	}
+        }
+
+        availableObjects();
+
+        let minLevelObjects = function() {
+        	for (let i = 0; i < objects.length; i++) {
+              if (objects[i].minLevel > 10) {
+              	console.log(objects[i]);
+              }
+        	}
+        } 
+     
+        minLevelObjects();
+
+
+        // ex-3;
+
+        let mainCharacter = {
+	        name: "Axel",
+	        level: 5,
+	        life: 7,
+	        weapon: {
+	        	name: "Bow",
+	        	damage: 25
+	        },
+	        attack: function() {
+	        	console.log(this["name"] +' attacks with the weapon ' + this["weapon"]["name"] + ' the damages are ' + this["weapon"]["damage"] * this["level"]);
+        	}
+        }
+
+        mainCharacter["attack"]();
+
+
+
+
+
+
+
+		
+	</script>
+
+</body>
+</html>
